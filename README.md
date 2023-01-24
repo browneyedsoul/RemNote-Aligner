@@ -6,7 +6,8 @@ Simple yet necessary things for every gardener who really cares about document l
 
 - Slash/Omnibar command → Type `ce` or `ri` → Return(Enter)
 
-| Alignment |Tag|
+| Alignment |Omnibar/Slash Command|
 |---|---|
 |center|`Center`|
 |right|`Right`|
+|left|`Left`|
