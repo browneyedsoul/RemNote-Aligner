@@ -6,8 +6,8 @@
   "repoUrl": "https://github.com/browneyedsoul/RemNote-Aligner",
   "version": {
     "major": 0,
-    "minor": 1,
-    "patch": 1
+    "minor": 2,
+    "patch": 0
   },
   "theme": [],
   "enableOnMobile": true,
@@ -16,7 +16,7 @@
   "requiredScopes": [
     {
       "type": "All",
-      "level": "Read"
+      "level": "ReadCreateModifyDelete"
     }
   ]
 }
