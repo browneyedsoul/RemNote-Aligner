@@ -12,7 +12,13 @@ async function onActivate(plugin: ReactRNPlugin) {
     description: "Align items per command",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(CENTER);
+
+      if (rem?.hasPowerup) {
+        rem?.removePowerup(RIGHT);
+        await rem?.addPowerup(CENTER);
+      } else {
+        await rem?.addPowerup(CENTER);
+      }
     },
   });
   await plugin.app.registerCommand({
@@ -21,7 +27,13 @@ async function onActivate(plugin: ReactRNPlugin) {
     description: "Align items per command",
     action: async () => {
       const rem = await plugin.focus.getFocusedRem();
-      await rem?.addPowerup(RIGHT);
+      
+      if (rem?.hasPowerup) {
+        rem?.removePowerup(CENTER)
+        await rem?.addPowerup(RIGHT);
+      } else {
+        await rem?.addPowerup(RIGHT);
+      }
     },
   });
 }
