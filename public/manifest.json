@@ -13,7 +13,6 @@
   "enableOnMobile": true,
   "description": "",
   "requestNative": false,
-  "unlisted": true,
   "requiredScopes": [
     {
       "type": "All",
