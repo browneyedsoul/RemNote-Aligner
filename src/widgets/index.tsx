@@ -11,19 +11,8 @@ async function onActivate(plugin: ReactRNPlugin) {
     name: "Center",
     description: "Align items per command",
     action: async () => {
-      const focusedRem = await plugin.focus.getFocusedRem();
-      if (!focusedRem) {
-        return;
-      }
-      let tag = await plugin.rem.findByName(["Center"], null);
-      if (!tag) {
-        tag = await plugin.rem.createRem();
-        if (!tag) {
-          return;
-        }
-        await tag.setText(["Center"]);
-      }
-      await focusedRem.addTag(tag);
+      const rem = await plugin.focus.getFocusedRem();
+      await rem?.addPowerup(CENTER);
     },
   });
   await plugin.app.registerCommand({
@@ -31,19 +20,8 @@ async function onActivate(plugin: ReactRNPlugin) {
     name: "Right",
     description: "Align items per command",
     action: async () => {
-      const focusedRem = await plugin.focus.getFocusedRem();
-      if (!focusedRem) {
-        return;
-      }
-      let tag = await plugin.rem.findByName(["Right"], null);
-      if (!tag) {
-        tag = await plugin.rem.createRem();
-        if (!tag) {
-          return;
-        }
-        await tag.setText(["Right"]);
-      }
-      await focusedRem.addTag(tag);
+      const rem = await plugin.focus.getFocusedRem();
+      await rem?.addPowerup(RIGHT);
     },
   });
 }
