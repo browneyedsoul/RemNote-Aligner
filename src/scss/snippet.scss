@@ -33,4 +33,14 @@
         }
     }
     @extend %remover;
-} 
+}
+[data-queue-rem-container-tags~="center"] {
+    .w-full {
+        @extend %statelessC;
+    }
+}
+[data-queue-rem-container-tags~="right"] {
+    .w-full {
+        @extend %statelessR;
+    }
+}
